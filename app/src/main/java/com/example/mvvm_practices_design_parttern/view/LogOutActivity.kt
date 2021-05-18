@@ -35,6 +35,7 @@ class LogOutActivity : BaseActivity<ActivityLogoutBinding>() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.menudItem) {
             auth.signOut()
+            //Firebase.auth.signOut()
             val logoutIntent = Intent(this, LoginActivity::class.java)
             logoutIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(logoutIntent)
