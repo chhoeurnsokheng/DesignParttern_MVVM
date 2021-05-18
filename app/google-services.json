@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1075803112801",
+    "project_id": "mvvm-practices-design-parttern",
+    "storage_bucket": "mvvm-practices-design-parttern.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1075803112801:android:8a8d53ca7953d56a0a7120",
+        "android_client_info": {
+          "package_name": "com.example.mvvm_practices_design_parttern"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1075803112801-s56mdf4cp5hies5v1g9fs0tt62cgqgkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCb-U5iRs0UDmEAtM7dKTSsbyqXijUufHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1075803112801-s56mdf4cp5hies5v1g9fs0tt62cgqgkt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,42 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+ update_fastlane
+
+default_platform(:android)
+
+platform :android do
+  desc "Build"
+  lane :build do
+    gradle(task: "clean assembleRelease")
+  end
+
+  desc "Submit a new Beta Build to Firebase App Distribution"
+  lane :beta do
+    build
+    firebase_app_distribution(
+        app:"1:1075803112801:android:8a8d53ca7953d56a0a7120",
+        groups: "group-two",
+        firebase_cli_token: "1//0eeYFKpwlMhrKCgYIARAAGA4SNwF-L9Ir5KZfa051dvnyPCdoxGzzNaBOPSRzidOehTCpe7eh340Ni6RjC-NVDPVEGgoSmZcNEU4",
+        release_notes: "Lots of amazing new features to test out!"
+    )
+    # sh "your_script.sh"
+    # You can also use other beta testing services here
+  end
+
+  desc "Deploy a new version to the Google Play"
+  lane :deploy do
+    gradle(task: "clean assembleRelease")
+    upload_to_play_store
+  end
+end

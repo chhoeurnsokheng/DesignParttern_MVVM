@@ -10,7 +10,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-private lateinit var mainViewModel: MainViewModel
+
+    private lateinit var mainViewModel: MainViewModel
     private fun loadData() {}
     override fun getContentLayoutId(): Int {
         return R.layout.activity_main

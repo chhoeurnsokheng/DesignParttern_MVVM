@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: update_fastlane" time="2.3928882">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.0025961">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: Switch to android build lane" time="0.0012965">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: clean assembleRelease" time="25.2942388">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: firebase_app_distribution" time="13.507991">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
