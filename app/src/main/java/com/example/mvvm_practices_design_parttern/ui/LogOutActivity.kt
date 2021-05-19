@@ -1,4 +1,4 @@
-package com.example.mvvm_practices_design_parttern.view
+package com.example.mvvm_practices_design_parttern.ui
 
 import android.content.Intent
 import android.os.Bundle
@@ -35,7 +35,7 @@ class LogOutActivity : BaseActivity<ActivityLogoutBinding>() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.menudItem) {
             auth.signOut()
-            //Firebase.auth.signOut()
+            // Firebase.auth.signOut()
             val logoutIntent = Intent(this, LoginActivity::class.java)
             logoutIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(logoutIntent)
