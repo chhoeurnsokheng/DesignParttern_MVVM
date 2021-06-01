@@ -1,0 +1,15 @@
+ext {
+    //RxJava
+    rxjava = "1.1.6"
+    rxandroid = "1.2.1"
+    rxjava3_retrofit_adapter = "3.0.0"
+
+    deps = [
+            //RxJava
+            rxjavaKotlin       : "io.reactivex:rxjava:${rxjava}",
+            rxjavaandroidkotlin: "io.reactivex:rxandroid:${rxandroid}",
+            rxjavaretrofit     : "com.github.akarnokd:rxjava3-retrofit-adapter:${rxjava3_retrofit_adapter}"
+    ]
+}
+
+

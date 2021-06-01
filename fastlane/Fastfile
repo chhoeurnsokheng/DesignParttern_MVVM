@@ -24,10 +24,11 @@ platform :android do
   desc "Submit a new Beta Build to Firebase App Distribution"
   lane :beta do
     build
+
     firebase_app_distribution(
         app:"1:1075803112801:android:8a8d53ca7953d56a0a7120",
         groups: "group-two",
-        firebase_cli_token: "1//0eeYFKpwlMhrKCgYIARAAGA4SNwF-L9Ir5KZfa051dvnyPCdoxGzzNaBOPSRzidOehTCpe7eh340Ni6RjC-NVDPVEGgoSmZcNEU4",
+        firebase_cli_token: "1//0eYxylCThmqQOCgYIARAAGA4SNwF-L9IrcwTeKZD_y98-rYdqTL6S2MvRG_ZbbmJ79Fb4JcGM_2X1OxBdHZ1ysjYrAIqPLoq6JBM",
         release_notes: "Lots of amazing new features to test out!"
     )
     # sh "your_script.sh"

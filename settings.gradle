@@ -1,2 +1,2 @@
-include ':app'
 rootProject.name = "MVVM_Practices_design_parttern"
+include ':app'

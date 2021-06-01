@@ -1,20 +1,23 @@
 package com.example.mvvm_practices_design_parttern.ui.profile
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.mvvm_practices_design_parttern.BaseActivity
 import com.example.mvvm_practices_design_parttern.R
-import com.google.android.material.button.MaterialButton
+import com.example.mvvm_practices_design_parttern.databinding.ActivityUserProfileBinding
 
-
-class UserProfileActivity : AppCompatActivity() {
+class UserProfileActivity : BaseActivity<ActivityUserProfileBinding> () {
     @SuppressLint("ResourceAsColor")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_user_profile)
-        var all=findViewById<MaterialButton>(R.id.all)
-        all.setOnClickListener {
-            all.setBackgroundColor(R.color.browser_actions_divider_color)
-        }
+
+//        var all=findViewById<MaterialButton>(R.id.all)
+//        all.setOnClickListener {
+//            all.setBackgroundColor(R.color.browser_actions_divider_color)
+//        }
+    }
+
+    override fun getContentLayoutId(): Int {
+        return R.layout.activity_user_profile
     }
 }

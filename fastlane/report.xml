@@ -5,27 +5,27 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: update_fastlane" time="2.3928882">
+      <testcase classname="fastlane.lanes" name="0: update_fastlane" time="3.0333446">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.0025961">
+      <testcase classname="fastlane.lanes" name="1: default_platform" time="0.0026671">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: Switch to android build lane" time="0.0012965">
+      <testcase classname="fastlane.lanes" name="2: Switch to android build lane" time="0.0027108">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: clean assembleRelease" time="25.2942388">
+      <testcase classname="fastlane.lanes" name="3: clean assembleRelease" time="57.0288659">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: firebase_app_distribution" time="13.507991">
+      <testcase classname="fastlane.lanes" name="4: firebase_app_distribution" time="14.3602344">
         
       </testcase>
     

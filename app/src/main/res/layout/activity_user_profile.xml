@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.profile.UserProfileActivity">
-<com.google.android.material.button.MaterialButton
-    android:id="@+id/all"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"/>
-</LinearLayout>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.profile.UserProfileActivity"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/logoutmenu"
+            app:title="EmojiStatus"
+            app:titleTextColor="@color/teal_200" />
+
+        <!--    <com.google.android.material.textview.MaterialTextView-->
+        <!--        android:layout_width="wrap_content"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_gravity="center"-->
+        <!--        android:text="Hello world" />-->
+
+       <EditText
+           android:id="@+id/titleText"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+       <com.google.android.material.button.MaterialButton
+           android:id="@+id/button"
+           android:text="Submit"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_gravity="center"
+           android:backgroundTint="@color/black"/>
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/recyclerView"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>
