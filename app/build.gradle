@@ -3,52 +3,21 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'com.google.gms.google-services'
-//    id 'com.android.application'
 }
 
 android {
 
-//    getByName("debug") {
-//        keyAlias = "debug"
-//        keyPassword = "my debug key password"
-//        storeFile = file("/home/miles/keystore.jks")
-//        storePassword = "my keystore password"
-//    }
-
-//    create("release") {
-//        keyAlias = "release"
-//        keyPassword = "my release key password"
-//        storeFile = file("/home/miles/keystore.jks")
-//        storePassword = "my keystore password"
-//    }
-
-//    signingConfigs {
-//        getByName("debug") {
-//            keyAlias = "debug"
-//            keyPassword = "my debug key password"
-//            storeFile = file("/home/miles/keystore.jks")
-//            storePassword = "my keystore password"
-//        }
-
-//        create("release") {
-//            keyAlias = "release"
-//            keyPassword = "my release key password"
-//            storeFile = file("/home/miles/keystore.jks")
-//            storePassword = "my keystore password"
-//        }
-//    }
-
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
-//    SigningConfigs{
-//        staging.intWith(signingConfigs.debug)
-//        release {
-//            storeFile file('mykey.keyStore')
-//            storePassword "grandleforandroid"
-//            keyPassword "123456"
-//        }
-//    }
+    signingConfigs{
+        release {
+            storeFile file("$rootProject.projectDir/keystores/mvvm_key_store.jks")
+            storePassword "123456"
+            keyAlias "key0"
+            keyPassword "123456"
+        }
+    }
 
     defaultConfig {
         applicationId "com.example.mvvm_practices_design_parttern"
@@ -61,22 +30,14 @@ android {
     }
 
     buildTypes {
-        release {
+        debug{
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-
-//        getByName("release") {
-//            isMinifyEnabled  false
-//            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-//            signingConfig = signingConfigs.getByName("release")
-//            isDebuggable = false
-//        }
-
-//        getByName("debug") {
-//            signingConfig = signingConfigs.getByName("debug")
-//            isDebuggable  true
-//        }
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+        }
 
     }
     compileOptions {
@@ -112,7 +73,7 @@ task ktlintFormat(type: JavaExec, group: "formatting") {
 }
 
 dependencies {
-
+    def dagger_version = "2.27"
     def lifecycle_version = "2.3.1"
     def room_version = "2.3.0"
     implementation 'com.google.firebase:firebase-auth:20.0.4'
@@ -121,13 +82,16 @@ dependencies {
 
     //ktlint
     ktlint "com.pinterest:ktlint:0.41.0"
-
+    //Dagger2
+    implementation "com.google.dagger:dagger:$dagger_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
     //retrofit and json
     implementation "com.squareup.retrofit2:retrofit:2.9.0"
     implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
     implementation "com.squareup.moshi:moshi:1.11.0"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:1.11.0"
     implementation 'com.google.code.gson:gson:2.8.5'
+
     //RxJava
     implementation 'io.reactivex:rxjava:1.1.6'
     implementation 'io.reactivex:rxandroid:1.2.1'
@@ -148,7 +112,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     // Import the BoM for the Firebase platform
-    implementation platform('com.google.firebase:firebase-bom:28.0.1')
+   //  implementation " com.google.firebase:firebase-bom:28.0.1 "
 
     // Declare the dependency for the Firebase Authentication library
     // When using the BoM, you don't specify versions in Firebase library dependencies
@@ -181,12 +145,12 @@ dependencies {
     implementation "androidx.room:room-guava:$room_version"
 
     // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     // LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
     // Lifecycles only (without ViewModel or LiveData)
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
     // Saved state module for ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version")
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
 
 }

@@ -3,12 +3,59 @@ ext {
     rxjava = "1.1.6"
     rxandroid = "1.2.1"
     rxjava3_retrofit_adapter = "3.0.0"
+    //retrofit and json
+    retrofit = "2.9.0"
+    retrofit2_converter_moshi = "2.9.0"
+    moshi_moshi = "1.11.0"
+    moshi_kotlin_codegen = "2.8.5"
+
+    //lifecyclce
+    core_core_ktx = "1.5.0"
+    appcompat = "1.2.0"
+    android_material = "1.3.0"
+    androidx_constraintlayout = "2.0.4"
+
+    //firebase
+    firebase_bom = "28.0.1"
+
+    //  Firebase Authentication
+    // google services
+    version_googleservices = "19.0.0"
+
+    //room
+    room_version = "2.3.0"
+
+    // life cyclce viewModel
+    lifecycle_viewmodel = "2.3.1"
 
     deps = [
             //RxJava
-            rxjavaKotlin       : "io.reactivex:rxjava:${rxjava}",
-            rxjavaandroidkotlin: "io.reactivex:rxandroid:${rxandroid}",
-            rxjavaretrofit     : "com.github.akarnokd:rxjava3-retrofit-adapter:${rxjava3_retrofit_adapter}"
+            rxjavaKotlin        : "io.reactivex:rxjava:${rxjava}",
+            rxjavaandroidkotlin : "io.reactivex:rxandroid:${rxandroid}",
+            rxjavaretrofit      : "com.github.akarnokd:rxjava3-retrofit-adapter:${rxjava3_retrofit_adapter}",
+
+            //retrofit and json
+            retrofit            : "com.squareup.retrofit2:retrofit:${retrofit}",
+            retrofit_moshi      : "com.squareup.retrofit2:converter-moshi:${retrofit2_converter_moshi}",
+            moshi               : "com.squareup.moshi:moshi:${moshi_moshi}",
+            moshi_kotlin        : "com.squareup.moshi:moshi-kotlin-codegen:${moshi_kotlin_codegen}",
+
+            // google services
+            googleservice       : "com.google.android.gms:play-services-auth:${version_googleservices}",
+            //room
+            room_ktx            : "androidx.room:room-rxjava2:${room_version}",
+            room_runtime        : "androidx.room:room-runtime:${room_version}",
+            room_complier       : "androidx.room:room-compiler:${room_version}",
+            room_rxjava2        : "androidx.room:room-rxjava2:${room_version}",
+            room_rxjava3        : "androidx.room:room-rxjava3:${room_version}",
+            room_guava          : "androidx.room:room-guava:${room_version}",
+
+            // life cyclce view model
+            lifecyclce_viewmodel: "androidx.lifecycle:lifecycle-viewmodel-ktx:${lifecycle_viewmodel}",
+            lifecyclce_livedate : "androidx.lifecycle:lifecycle-livedata-ktx:${lifecycle_viewmodel}",
+            lifecyclce_runtime  : "androidx.lifecycle:lifecycle-runtime-ktx:${lifecycle_viewmodel} ",
+            lifecyclce_state    : "androidx.lifecycle:lifecycle-viewmodel-savedstate:${lifecycle_viewmodel} "
+
     ]
 }
 
