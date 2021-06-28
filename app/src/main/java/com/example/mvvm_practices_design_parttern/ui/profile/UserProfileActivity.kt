@@ -11,10 +11,6 @@ class UserProfileActivity : BaseActivity<ActivityUserProfileBinding> () {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-//        var all=findViewById<MaterialButton>(R.id.all)
-//        all.setOnClickListener {
-//            all.setBackgroundColor(R.color.browser_actions_divider_color)
-//        }
     }
 
     override fun getContentLayoutId(): Int {

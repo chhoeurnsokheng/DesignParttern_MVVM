@@ -38,4 +38,5 @@ class UserAdapter(val viewModel: UserViewModel, val arrayList: ArrayList<Blog>, 
         //  return UserViewHolder()
         TODO()
     }
+
 }

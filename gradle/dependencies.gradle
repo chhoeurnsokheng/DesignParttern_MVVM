@@ -28,6 +28,8 @@ ext {
     // life cyclce viewModel
     lifecycle_viewmodel = "2.3.1"
 
+
+
     deps = [
             //RxJava
             rxjavaKotlin        : "io.reactivex:rxjava:${rxjava}",

@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">MVVM_Practices_design_parttern</string>
+    <string name="app_name">MVVM_Practices</string>
+    <string name="home">Home</string>
+    <string name="partner">Our Partner</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="tell_friend">Tell a Friend</string>
 </resources>
