@@ -1,42 +1,43 @@
 package com.example.mvvm_practices_design_parttern.ui.profile
 
-import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
-import com.example.mvvm_practices_design_parttern.databinding.ItemViewBinding
-import com.example.mvvm_practices_design_parttern.model.Blog
+import com.bumptech.glide.Glide
+import com.example.mvvm_practices_design_parttern.R
+import com.example.mvvm_practices_design_parttern.model.User
+import kotlinx.android.synthetic.main.item_layout.view.*
 
-class UserAdapter(val viewModel: UserViewModel, val arrayList: ArrayList<Blog>, val context: Context) :
-    RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
-    class UserViewHolder(val binding: ItemViewBinding, val viewModel: UserViewModel) : RecyclerView.ViewHolder(binding.root) {
-        fun bind(blog: Blog) {
-            binding.apply {
-                title.text = blog.title
-                delete.setOnClickListener {
-                    viewModel.remove(blog)
-                    notifyChange()
-                }
-            }
+class MainAdapter(
+    private val users: ArrayList<User>
+) : RecyclerView.Adapter<MainAdapter.DataViewHolder>() {
+
+    class DataViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun bind(user: User) {
+            itemView.textViewUserName.text = user.name
+            itemView.textViewUserEmail.text = user.email
+            Glide.with(itemView.imageViewAvatar.context)
+                .load(user.avatar)
+                .into(itemView.imageViewAvatar)
         }
     }
 
-    override fun getItemCount(): Int {
-        if (arrayList.size == 0) {
-            Toast.makeText(context, "List is Empty", Toast.LENGTH_LONG).show()
-        } else {
-        }
-        return arrayList.size
-    }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        DataViewHolder(
+            LayoutInflater.from(parent.context).inflate(
+                R.layout.item_layout, parent,
+                false
+            )
+        )
 
-    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = users.size
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
-        //  val root =LayoutInflater.from(parent.context).inflate(R.layout.item_view,parent,false)
-        //  return UserViewHolder()
-        TODO()
+    override fun onBindViewHolder(holder: DataViewHolder, position: Int) =
+        holder.bind(users[position])
+
+    fun addData(list: List<User>) {
+        users.addAll(list)
     }
 
 }

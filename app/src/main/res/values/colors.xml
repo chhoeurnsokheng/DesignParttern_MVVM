@@ -9,4 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="yellow">#c6ffb3</color>
     <color name="red">#DD1010</color>
+    <color name="colorGrey">#dddddd</color>
+    <color name="signInColor">#FF6200EE</color>
+    <color name="signUpColor">#FFFFFFFF</color>
 </resources>

@@ -4,4 +4,21 @@
     <string name="partner">Our Partner</string>
     <string name="contact_us">Contact Us</string>
     <string name="tell_friend">Tell a Friend</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="on_boarding_bottom_text">Not ready to sign up? Explore the app</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_title">Sokheng is Sokheng… !</string>
+    <string name="nav_header_subtitle">sokheng.chhoeurn@sokheng.com</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Sitting</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
 </resources>

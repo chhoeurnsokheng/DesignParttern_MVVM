@@ -15,4 +15,5 @@ abstract class BaseActivity<B : ViewDataBinding> : AppCompatActivity() {
     }
     @LayoutRes
     abstract fun getContentLayoutId(): Int
+
 }
