@@ -79,11 +79,10 @@ dependencies {
     def lifecycle_version = "2.3.1"
     def room_version = "2.3.0"
     def google_services="12.0.1"
-
-
     def viewPagerVersion = "1.0.0"
-    implementation "androidx.viewpager2:viewpager2:$viewPagerVersion"
     def glide_version = "4.9.0"
+
+    implementation "androidx.viewpager2:viewpager2:$viewPagerVersion"
     implementation "com.github.bumptech.glide:glide:$glide_version"
     implementation "com.github.bumptech.glide:okhttp3-integration:$glide_version"
     kapt "com.github.bumptech.glide:compiler:$glide_version"
@@ -97,7 +96,6 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:1.1.0"
     implementation 'com.amitshekhar.android:android-networking:1.0.2'
     implementation 'com.github.bumptech.glide:glide:4.11.0'
-
 
     // Skeleton
     implementation 'com.github.skydoves:androidveil:1.0.8'

@@ -12,6 +12,7 @@ import com.example.mvvm_practices_design_parttern.BaseActivity
 import com.example.mvvm_practices_design_parttern.R
 import com.example.mvvm_practices_design_parttern.databinding.ActivityMainBinding
 import com.example.mvvm_practices_design_parttern.ui.profile.UserProfileActivity
+import com.example.mvvm_practices_design_parttern.ui.uploadpicture.UploadProfileActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
@@ -78,7 +79,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), NavigationView.OnNavig
                 startActivity(Intent(this,UserProfileActivity::class.java))
             }
             R.id.nav_gallery -> {
-
+             startActivity(Intent(this, UploadProfileActivity::class.java))
             }
             R.id.nav_slideshow -> {
 

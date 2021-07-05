@@ -23,6 +23,7 @@ class UserProfileActivity : BaseActivity<ActivityUserProfileBinding> () {
         setupUI()
         setupAPICall()
     }
+
     private fun setupUI() {
         recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = MainAdapter(arrayListOf())
@@ -34,6 +35,7 @@ class UserProfileActivity : BaseActivity<ActivityUserProfileBinding> () {
         )
         recyclerView.adapter = adapter
     }
+
     private fun setupAPICall() {
         AndroidNetworking.initialize(applicationContext)
         AndroidNetworking.get("https://5e510330f2c0d300147c034c.mockapi.io/users")
