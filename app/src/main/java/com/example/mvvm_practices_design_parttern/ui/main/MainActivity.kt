@@ -1,5 +1,5 @@
 package com.example.mvvm_practices_design_parttern.ui.main
-
+//Create by Sokheng chhoeurn
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -116,7 +116,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), NavigationView.OnNavig
             else -> super.onOptionsItemSelected(item)
         }
     }
-
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_home -> {
