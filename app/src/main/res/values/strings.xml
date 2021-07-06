@@ -21,5 +21,6 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
-
+    <string name="menu_darkmode">Dark  Mode</string>
+    <string name="choose_theme_text">Choose Theme</string>
 </resources>

@@ -12,4 +12,21 @@
     <color name="colorGrey">#dddddd</color>
     <color name="signInColor">#FF6200EE</color>
     <color name="signUpColor">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="text_color">#ffffff</color>
+    <color name="hint_text_color">#F88909</color>
+
+    <color name="switchTrack">#ffffff</color>
+    <color name="switchThumb">#1DA1D2</color>
+
+    <color name="button_background_color">#F88909</color>
+
+    <color name="ic_settings_color">#FFFFFFFF</color>
+    <color name="ic_attachment_color">#FFFFFFFF</color>
+    <color name="background_color">#FF808080</color>
+    <color name="ic_color_lens_color">#FFFFFFFF</color>
 </resources>

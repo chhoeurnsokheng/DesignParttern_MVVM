@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
   <group   android:checkableBehavior="none">
 
       <item
@@ -29,6 +30,12 @@
                 android:id="@+id/nav_send"
                 android:icon="@drawable/ic_menu_send"
                 android:title="@string/menu_send"/>
+            <item
+                app:showAsAction="always"
+                app:actionViewClass="android.widget.Switch"
+                android:id="@+id/nav_dark"
+                android:title="@string/menu_darkmode"/>
+
         </menu>
     </item>
 </menu>
